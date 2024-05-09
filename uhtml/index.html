@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Open Science Meets Citizen Science</title>
+    <link type="text/css" rel="stylesheet" href="css/book.css" />
+    <style>
+      a.fn {
+        -adapt-template: url(data:application/xml,%3Chtml%20xmlns=%22http://www.w3.org/1999/xhtml%22%20xmlns:s=%22http://www.pyroxy.com/ns/shadow%22%3E%3Chead%3E%3Cstyle%3E.footnote-content%7Bfloat:footnote%7D%3C/style%3E%3C/head%3E%3Cbody%3E%3Cs:template%20id=%22footnote%22%3E%3Cs:content/%3E%3Cs:include%20class=%22footnote-content%22/%3E%3C/s:template%3E%3C/body%3E%3C/html%3E#footnote);
+        text-decoration: none;
+        color: inherit;
+        vertical-align: baseline;
+        font-size: 70%;
+        position: relative;
+        top: -0.3em;
+      }
+      body {
+        background-color: white;
+      }
+      section[role=doc-footnote] .footnote-counter:after {
+        content: ". ";
+      }
+      section.fnlist {
+        display: none;
+      }
+      section:footnote-content {
+        display: block;
+        font-style: normal;
+        font-weight: normal;
+        text-decoration: none;
+      }
+      .table-of-contents a {
+        display: inline-flex;
+        width: 100%;
+        text-decoration: none;
+        color: currentColor;
+        break-inside: avoid;
+        align-items: baseline;
+      }
+      .table-of-contents a::before {
+        margin-left: 1px;
+        margin-right: 1px;
+        border-bottom: solid 1px lightgray;
+        content: "";
+        order: 1;
+        flex: auto;
+      }
+      .table-of-contents a::after {
+        text-align: right;
+        content: target-counter(attr(href, url), page);
+        align-self: flex-end;
+        flex: none;
+        order: 2;
+      }
+      @page {
+        size: A4;
+        @top-center {
+          content: env(doc-title);
+        }
+        @bottom-center {
+          content: counter(page);
+        }
+      }
+      @page :first {
+        @bottom-center {
+          content: normal;
+        }
+        @top-center {
+          content: normal;
+        }
+      }
+      figure img {
+        max-width: 100%;
+      }
+      .article-title {
+        page-break-before: right;
+      }
+      h1.part {
+        page-break-before: right;
+      }
+      .copyrightpage {
+        page-break-before: left;
+      }
+      .tocpage {
+        page-break-before: right;
+      }
+      .booktitle {
+        text-align: center;
+      }
+    </style>
+    <link type="text/css" rel="stylesheet" href="css/cs4rl.css" />
+  </head>
+  <body class="user-contents">
+    <div class="titlepage frontmatter">
+      <h1 class="booktitle">Open Science Meets Citizen Science</h1>
+      <h2 class="booksubtitle">Citizen Science for Research Libraries — A Guide</h2>
+      <h4 class="bookversion">Section Editor Bastian Greshake Tzovaras. Version 1.0 </h4>
+    </div>
+    <div class="copyrightpage frontmatter">
+      <p>Published by: LIBER Citizen Science Working Group</p>
+      <p>Last updated: 2024-05-09</p>
+      <p>Created: 2022-04-19</p>
+      <p>Language: English (United Kingdom)</p>
+      <p>Created by: Editorial Team</p>
+    </div>
+    <div class="tocpage frontmatter">
+      <nav role="doc-toc">
+        <ol>
+          <li>
+            <a href="#_1_0">
+              About the Book
+            </a>
+            <ol>
+              <li>
+                <a href="#H1638982">
+                  Open Science Meets Citizen Science
+                </a>
+              </li>
+            </ol>
+          </li>
+          <li>
+            <a href="#_2_0">
+              Foreword
+            </a>
+            <ol>
+              <li>
+                <a href="#_2_1">
+                  Bibliography
+                </a>
+              </li>
+            </ol>
+          </li>
+          <li>
+            <a href="#_3_0">
+              Introduction
+            </a>
+            <ol>
+              <li>
+                <a href="#H7625704">
+                  Learning outputs
+                </a>
+              </li>
+            </ol>
+          </li>
+          <li>
+            <a href="#_4_0">
+              Quickstart Guide
+            </a>
+          </li>
+          <li>
+            <a href="#_5_0">
+              Implementing Open Science Practices into a Citizen Science Project
+            </a>
+            <ol>
+              <li>
+                <a href="#H9345714">
+                  Step 1: Mentoring for open science
+                </a>
+              </li>
+              <li>
+                <a href="#H8491217">
+                  Step 2: Designing Engagement
+                </a>
+              </li>
+              <li>
+                <a href="#H8063936">
+                  Step 3: Ethics in citizen science projects
+                </a>
+              </li>
+              <li>
+                <a href="#H5925238">
+                  Step 4: Data collection I – Open Hardware
+                </a>
+              </li>
+              <li>
+                <a href="#H4389015">
+                  Step 4: Data collection II – Open Data
+                </a>
+              </li>
+              <li>
+                <a href="#H8873780">
+                  Step 5: Data analysis
+                </a>
+              </li>
+              <li>
+                <a href="#H4844781">
+                  Step 6: Publishing results
+                </a>
+              </li>
+              <li>
+                <a href="#_5_1">
+                  Bibliography
+                </a>
+              </li>
+            </ol>
+          </li>
+          <li>
+            <a href="#_6_0">
+              Ethical Practices for Citizen Science
+            </a>
+            <ol>
+              <li>
+                <a href="#H2050993">
+                  Inclusion and empowerment: “Nothing about us without us”
+                </a>
+              </li>
+              <li>
+                <a href="#H4207009">
+                  Safeguarding your community
+                </a>
+              </li>
+              <li>
+                <a href="#H3134649">
+                  Scoping your community
+                </a>
+              </li>
+              <li>
+                <a href="#H892149">
+                  Trust and transparency
+                </a>
+              </li>
+              <li>
+                <a href="#H3497662">
+                  Sharing opportunities
+                </a>
+              </li>
+              <li>
+                <a href="#H5615755">
+                  Case Study: AutSPACEs
+                </a>
+              </li>
+            </ol>
+          </li>
+          <li>
+            <a href="#_7_0">
+              Open Hardware Overview
+            </a>
+            <ol>
+              <li>
+                <a href="#H1433413">
+                  The problem with science tools
+                </a>
+              </li>
+              <li>
+                <a href="#H6093484">
+                  What do we share in open hardware?
+                </a>
+              </li>
+              <li>
+                <a href="#H3817884">
+                  Infobox: What is open hardware for science?
+                </a>
+              </li>
+              <li>
+                <a href="#H186333">
+                  Who is making and using open hardware for science?
+                </a>
+              </li>
+              <li>
+                <a href="#H9840669">
+                  How are people building &amp; sharing open hardware in science?
+                </a>
+              </li>
+              <li>
+                <a href="#H5389706">
+                  Infobox: Distributed manufacturing
+                </a>
+              </li>
+              <li>
+                <a href="#H3352054">
+                  Which are the benefits of open hardware?
+                </a>
+              </li>
+              <li>
+                <a href="#H2244891">
+                  Libraries as hubs for science tools
+                </a>
+              </li>
+              <li>
+                <a href="#H7229447">
+                  Connecting to open hardware communities
+                </a>
+              </li>
+              <li>
+                <a href="#H2414262">
+                  Featured projects
+                </a>
+                <ol>
+                  <li>
+                    <a href="#H4094029">
+                      Audiomoth
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#H6856963">
+                      OpenFlexure
+                    </a>
+                  </li>
+                </ol>
+              </li>
+              <li>
+                <a href="#_7_1">
+                  Bibliography
+                </a>
+              </li>
+            </ol>
+          </li>
+          <li>
+            <a href="#_8_0">
+              Open Science Fellows Program 2016-2021
+            </a>
+          </li>
+          <li>
+            <a href="#_9_0">
+              Wikimedians In Residence
+            </a>
+          </li>
+          <li>
+            <a href="#_10_0">
+              Wiki Platforms for Citizen Science
+            </a>
+            <ol>
+              <li>
+                <a href="#_10_1">
+                  Bibliography
+                </a>
+              </li>
+            </ol>
+          </li>
+          <li>
+            <a href="#_11_0">
+              Citizen Science Using Personal Data
+            </a>
+          </li>
+        </ol>
+      </nav>
+    </div>
+    <div class="article-part article-title" id="_1_0">About the Book</div>
+    <div class="article-part article-richtext article-body">
+      <h2 id="H1638982">Open Science Meets Citizen Science</h2>
+      <p>Section Editor Bastian Greshake Tzovaras</p>
+      <p>v1.0, 2024</p>
+      <p>Series: Citizen Science for Research Libraries — A Guide</p>
+      <p></p>
+      <hr>
+      <p></p>
+      <p><strong>Co-Editors-in-Chief:</strong> Thomas Kaarsted &amp; Simon Worthington. Correspondence <a href="mailto:simon.worthington@tib.eu" title="simon.worthington@tib.eu">simon.worthington@tib.eu</a>. <strong>Editors:</strong> Alisa Martek and Dragana Janković. <strong>Reviewers:</strong> Dr Raphaëlle Bats, Sara Decoster, Jitka Stilund Hansen, Tiberius Ignat, and Mitja V. Iskrić. </p>
+      <p><strong>Editorial Committee:</strong> Paul Ayris (Chair), Bastian Greshake Tzovaras, Jitka Stilund Hansen, and Kirsty Wallis.</p>
+      <p>DOI:<strong>&nbsp;</strong><a href="https://doi.org/10.25815/2tj5-0289" title="https://doi.org/10.25815/2tj5-0289">10.25815/2tj5-0289</a> | ISBN Print:<strong>&nbsp;</strong>978-87-94345-90-3 e‑book:<strong>&nbsp;</strong>978-87-94345-91-0 | Wikidata: <a href="https://www.wikidata.org/wiki/Q125808304" title="https://www.wikidata.org/wiki/Q125808304">Q125808304</a></p>
+      <p>Web: <a href="https://cs4rl.github.io/open-science" title="https://cs4rl.github.io/open-science">cs4rl.github.io/open-science</a> | Source: <a href="https://github.com/cs4rl/open-science" title="https://github.com/cs4rl/open-science">github.com/cs4rl/open-science</a> | Series: <a href="https://libereurope.eu/working-group/liber-citizen-science-working-group/citizen-science-guide/" title="https://libereurope.eu/working-group/liber-citizen-science-working-group/citizen-science-guide/">libereurope.eu/cs4rl</a> </p>
+      <p>Published by LIBER Citizen Science Working Group. </p>
+      <p>Collaborations: SciStarter and ECSA.</p>
+      <p>Copyright © 2024 the authors. Publication, articles, and images licensed under a Creative Commons Attribution Share Alike 4.0 International License – (<a href="https://creativecommons.org/licenses/by-sa/4.0/" title="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a>) unless otherwise stated.</p>
+      <p>Multi-format production: #NextGenBooks – Open Science Lab, <a href="https://github.com/TIBHannover/ADA. " title="https://github.com/TIBHannover/ADA. ">TIB – ADA Publishing Pipeline</a>. CSS template production courtesy Raquel Perez de Eulate, Interpunct Studios – <a href="https://interpunct.dev/" title="https://interpunct.dev/">Interpunct.dev</a>. Design based on template design: Geralda van der Es/ SPRESSO.</p>
+      <p>Code – <a href="https://github.com/cs4rl/guide/LICENSE" title="https://github.com/cs4rl/guide/LICENSE">GNU General Public License v3.0</a>. Data – All data and data sets produced are <a href="https://creativecommons.org/publicdomain/zero/1.0/" title="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a>, Public Domain.</p>
+      <p>Print and PDF design template (CC BY-SA). Multi-format template (CC BY-SA). Fonts: CrimsonText and Lato, these fonts are licensed under the SIL <a href="https://scripts.sil.org/OFL" title="https://scripts.sil.org/OFL">Open Font License </a>(OFL). Free and Open Source Software used in production – Fidus Writer (GNU AFFERO GPL), Vivliostyle (GNU AFFERO GPL).</p>
+      <p>Cover image: European Space Agency (ESA), ASAR global monitoring <a href="https://www.esa-photolibrary.com/ESA/media/20377" title="https://www.esa-photolibrary.com/ESA/media/20377">Mode of the Antarctic</a>. The material is ESA copyright and is supplied to you free of charge on the following <a href="https://www.esa-photolibrary.com/ESA/info2.do" title="https://www.esa-photolibrary.com/ESA/info2.do">terms and conditions</a>. Find out more about <a href="https://earth.esa.int/eogateway/missions/envisat/descriptionmissions/envisat/description" title="https://earth.esa.int/eogateway/missions/envisat/descriptionmissions/envisat/description">Envisat here</a>.</p>
+    </div>
+    <section class="fnlist" role="doc-footnotes"></section>
+    <div class="article-part article-title" id="_2_0">Foreword</div>
+    <div class="article-part article-richtext article-body">
+      <figure id="F49342861" class="aligned-left image-width-25" data-aligned="left" data-width="25" data-category="none" data-caption-hidden="true"><img src="images/a4704b47-11cb-4d24-a000-6f27772a4b0d.png"></figure>
+      <p><em>Simon Worthington &amp; Thomas Kaarsted, Co-Editors-in-Chief.</em></p>
+      <p>Welcome to <em>Open Science Meets Citizen Science </em>edited by Bastian Greshake Tzovaras of The Alan Turing Institute. It is the third section of the guide series <em>Citizen Science for Research Libraries.</em></p>
+      <p>Open science brings an expanding field of new practices, methods, and frameworks for use in citizen science — many of which are often already situated in the research library — for example: Open Education Resources (OER), FAIR Data with research data management, and Open Access services and support. The guide covers questions of how to implement open science practices in general in your citizen science project, the ethical considerations for data and citizen's personal data as is now commonplace from health and fitness wearable devices, an in-depth exploration of the area of open hardware for instruments to use in citizen projects, and a look how the Wikimedia Foundation platforms and programmes intersects with citizen science.</p>
+      <p>Changing the culture of science and focusing on the scientific benefits for society is now a well-established anchoring for open science and give a clear connection to citizen science practice and values. Open science values are perfectly summarized in the <em><a href="https://unesdoc.unesco.org/ark:/48223/pf0000379949?posInSet=3&amp;queryId=7bfc8422-3052-462b-855e-5826935e6dea" title="https://unesdoc.unesco.org/ark:/48223/pf0000379949?posInSet=3&amp;queryId=7bfc8422-3052-462b-855e-5826935e6dea">UNESCO Recommendation on Open Science</a></em> <span class="citation">(<i>UNESCO Recommendation on Open Science</i> 2021)</span>, as: quality and integrity; collective benefit; equality and fairness, and; diversity and inclusion. The culture of open science is about adopting these values in such areas as collaboration, research assessment, people’s well-being, and delivering on equality and inclusion.</p>
+      <p>How to make use of what is available from open science is covered in the article 'Implementing Open Science Practices into a Citizen Science Project' (DOI <a href="https://doi.org/10.25815/qb6h-9915" title="https://doi.org/10.25815/qb6h-9915">10.25815/qb6h-9915</a>; Page 11). The use of data is an area that is well-supported by open science in terms of data analysis tool like R and Jupyter Notebooks that have democratized data science and allow easy use and analysis by the interested public. Additionally, the collecting, handling, and open publishing of data is extensively supported by literature for Research Data Management plans that feature citizen science.</p>
+      <p>If 'inclusion and empowerment' are a priority for researchers leading citizen science projects then the article 'Ethical Practices for Citizen Science' (DOI <a href="https://doi.org/10.25815/j3pv-3t92" title="https://doi.org/10.25815/j3pv-3t92">10.25815/j3pv-3t92</a>; Page 15) has as a roadmap for thinking through the issue involved aimed at creating genuine engagement and a community-led use-case with the project '<a href="https://www.turing.ac.uk/research/research-projects/citizen-science-platform-autistica" title="https://www.turing.ac.uk/research/research-projects/citizen-science-platform-autistica">AutSPACEs</a>'. Creating safe spaces for participants is now a familiar practice with the use of Codes of Conduct, but here again the detail counts — with a recommendation from the article being to co-write a Codes of Conduct with members of the group involved in a citizen science project. Codes of Conduct are a good point in case as they have been championed by the open science movement and reflect the more recent shift in open science to questions of values — inclusion issue of gender, race, and knowledge equity — in addition to the earlier work on technical infrastructures, and being open.</p>
+      <p>Open Hardware comes from communities of practice, the maker movement and Fab Labs as well as open-source software. Both the maker movement and open-source are popular hobbies, with supporting online communities and in fact whole industries, which means there is a low barrier participants engagement. For the purpose of engaging in research Open Hardware provides open licenced designs, plans, instructions, and training, as well as low entry pricing — this becomes especially import in Global South contexts. Two example featured projects are: <a href="https://www.openacousticdevices.info/" title="https://www.openacousticdevices.info/">Audiomoth</a> a microelectronics audio receiver used in tracking moths, and; <a href="https://openflexure.org/" title="https://openflexure.org/">OpenFlexure</a> which utilises 3D printing to a manufacture precision microscope. </p>
+      <p>The Wikimedia Foundation with its suite of platforms and public engagement programmes is an interesting interface for researchers to work with the public. In terms of platforms Wikimedia has: Wikipedia, Wikibase, Wiki Commons, and Wikiversity to mention a few — but all have the foundation in the Wiki idea of an open and editable democratic Web. In addition to the platforms there are also the programmes that the foundation runs. Featured in the guide are the <a href="https://de.wikiversity.org/wiki/Wikiversity:Fellow-Programm_Freies_Wissen" title="https://de.wikiversity.org/wiki/Wikiversity:Fellow-Programm_Freies_Wissen">Open Science Fellows Program</a> and <a href="https://meta.wikimedia.org/wiki/Wikimedian_in_residence" title="https://meta.wikimedia.org/wiki/Wikimedian_in_residence">Wikimedian in Residence</a>. </p>
+      <p><em>Open Science Meets Citizen Science</em> will be followed by one more section in the series of four guide sections that have made up this first volume from the working group. The final section will look at issues related to rolling out a programme in the institutional context. The current volume put in place the vision as established by the working group of sharing practical experience from research library and citizen science community. </p>
+      <p>To take the publishing project forward and to accommodate what has been an expanding working group which now has thirty-three members from eighteen countries — so the editorial model is also evolving as the working group goes into its second term. Going forwards the editorial team has been expanded to ten members and the editorial agenda will attempt to track and represent the strategic directions of the wider working group's activities. The strategic directions are: training for leadership teams, training for librarians, design library services, advocacy of citizen science for the non-library, how to show impact/measuring, university management, and citizen science in the curriculum.</p>
+      <p>The guide series is brought to you by the LIBER Citizen Science Working Group. The guide is part of a themed series of four sections — skills, infrastructures, open science, and programme development — based on the <em>LIBER Open Science Roadmap </em><span class="citation">(LIBER 2018)</span> that runs through 2027.</p>
+    </div>
+    <section class="fnlist" role="doc-footnotes"></section>
+    <h1 class="article-bibliography-header" id="_2_1">Bibliography</h1>
+    <div class="csl-bib-body">
+      <div class="csl-entry">LIBER. 2018. “LIBER Open Science Roadmap.” https://doi.org/10.5281/zenodo.1303002.</div>
+      <div class="csl-entry"><i>UNESCO Recommendation on Open Science</i>. 2021. https://doi.org/10.54677/mnmh8546.</div>
+    </div>
+    <div class="article-part article-title" id="_3_0">Introduction</div>
+    <div class="article-part article-richtext article-body">
+      <figure id="F87598101" class="aligned-center image-width-100" data-aligned="center" data-width="100" data-category="figure"><img src="images/46432e2d-d3ab-4a85-a11b-5cee9c9f7273.jpg">
+        <figcaption><span class="label-counter" data-book-counter="1" data-chapter-counter="1">Figure</span><span class="text">The Open Science Umbrella, by Robin Champieux &amp; Danielle Robinson. Updated by Simon Worthington, 2024. <a href="https://www.meetup.com/berlin-open-science-meetup/" title="https://www.meetup.com/berlin-open-science-meetup/">https://www.meetup.com/berlin-open-science-meetup/</a></span></figcaption>
+      </figure>
+      <p></p>
+      <p><em>By Bastian Greshake Tzovaras (ORCID iD: <a href="https://orcid.org/0000-0002-9925-9623" title="Bastian Greshake Tzovaras">0000-0002-9925-9623</a>), The Alan Turing Institute.</em></p>
+      <p><strong>Article DOI:</strong> <strong><a href="https://doi.org/10.25815/2bat-2y32" title="https://doi.org/10.25815/2bat-2y32">10.25815/2bat-2y32</a></strong></p>
+      <p>Open Science is an umbrella term for a wide variety of research practices that are broadly concerned with making the process of scientific research itself and its outputs more accessible to all levels of society. While there are a number of schools of thought which differ in the underlying motivations for implementing open science practices, commonly shared reasons to practice open science include improving efficiency of research, increasing its impact, enabling reproducibility of research and democratizing the process of doing science itself.&nbsp;</p>
+      <p>Four main branches of open science concern the different stages of the research process:&nbsp;</p>
+      <ol id="L73169011">
+        <li>
+          <p><em>Open Educational Resources</em> – such as this book – are concerned with providing access to educational materials for learning, including materials to teach how to do research.&nbsp;</p>
+        </li>
+        <li>
+          <p><em>Open Source software &amp; hardware</em> provide transparent and free access to the tools needed for doing research, i.e. collecting and analyzing data.&nbsp;</p>
+        </li>
+        <li>
+          <p><em>FAIR Data Principles </em>not only allows for increased reproducibility and transparency, but also enables data reuse in novel research projects.</p>
+        </li>
+        <li>
+          <p><em>Open Access</em> to research outputs such as publications provides researchers as well as an interested non-academic audience with the possibility to read primary academic literature.</p>
+        </li>
+      </ol>
+      <p>When it comes to citizen science, open science practices not only are good scientific practice, but are also important out of ethical considerations for volunteer participants: Given that citizen science aspires to increase public participation and democratization of science, it is important that citizen science projects implement these and open science practices to provide citizen participants with a more holistic access to research procedures and outputs, allowing them to fully benefit from their volunteer engagement. But unfortunately, while citizen/community science is often included under the open science umbrella, implementing other open science practices in citizen science projects is not guaranteed and remains the exception from the rule. For example, many citizen science projects continue to publish their findings behind paywalls and do not openly share their data. To improve this situation it is important that open science principles are already kept in mind when embarking on a new citizen science project. In this section we cover different open science practices and how they can be implemented in citizen science.&nbsp;</p>
+      <h2 id="H7625704">Learning outputs</h2>
+      <ol id="L17028071">
+        <li>
+          <p>What are the ethical considerations for implementing open science in a citizen science project?&nbsp;</p>
+        </li>
+        <li>
+          <p>Which dimensions of open science are relevant to citizen science?</p>
+        </li>
+        <li>
+          <p>How can they be included in citizen science projects you (help) facilitate?</p>
+        </li>
+      </ol>
+    </div>
+    <section class="fnlist" role="doc-footnotes"></section>
+    <div class="article-part article-title" id="_4_0">Quickstart Guide</div>
+    <div class="article-part article-richtext article-abstract">
+      <p>Getting started with how to integrate open science good practice for your citizen science project.</p>
+    </div>
+    <div class="article-part article-richtext article-body">
+      <p><em>By Bastian Greshake Tzovaras (ORCID iD: <a href="https://orcid.org/0000-0002-9925-9623" title="Bastian Greshake Tzovaras">0000-0002-9925-9623</a>), The Alan Turing Institute.</em></p>
+      <p><strong>Article DOI: <a href="https://doi.org/10.25815/j2nt-s512" title="https://doi.org/10.25815/j2nt-s512">10.25815/j2nt-s512</a></strong></p>
+      <p><strong>Open science is:</strong></p>
+      <ul id="L78052581">
+        <li>
+          <p>A collection of practices that open up access to research outputs, data and methodologies for professional and non-professional researchers alike.</p>
+        </li>
+      </ul>
+      <ul id="L90850321">
+        <li>
+          <p>Aiming to improve inclusivity of research by making it accessible regardless of background, location or training.</p>
+        </li>
+        <li>
+          <p>Increasingly mandated by academic funders and policy makers to ensure the maximum impact of publicly funded research.</p>
+        </li>
+        <li>
+          <p>A natural fit for citizen science as both values and goals overlap well.</p>
+        </li>
+        <li>
+          <p>Increasingly already being implemented in research libraries to support researchers as local institutions.</p>
+        </li>
+      </ul>
+      <p><strong>Learn more about open science:</strong></p>
+      <figure id="F96606181" class="aligned-center image-width-75" data-aligned="center" data-width="75" data-category="none"><img src="images/5aa302a9-6fa5-4db5-8cf7-dcda651bfa3c.jpg">
+        <figcaption><span class="label"></span><span class="text">Video tutoria<span class="comment" data-id="2508816765">l</span>: <a href="https://www.youtube.com/watch?v=L2nxskYemJE" title="https://www.youtube.com/watch?v=L2nxskYemJE">OpenScienceMOOC</a>. Module 1: Open Principles and an Introduction to Open Science. License <br><a href="https://support.google.com/youtube/answer/2797468" title="https://support.google.com/youtube/answer/2797468">Creative Commons Attribution licence (reuse allowed)</a></span></figcaption>
+      </figure>
+      <p>Learn more about Open Science through the OpenScienceMOOC: <a href="https://opensciencemooc.eu">https://opensciencemooc.eu</a>&nbsp;</p>
+      <ul id="L62704801">
+        <li>
+          <p>Discover the various <a href="https://link.springer.com/chapter/10.1007%2F978-3-319-00026-8_2" title="https://link.springer.com/chapter/10.1007%2F978-3-319-00026-8_2">schools of thought</a> on open science: <a href="https://link.springer.com/chapter/10.1007%2F978-3-319-00026-8_2">https://link.springer.com/chapter/10.1007%2F978-3-319-00026-8_2</a>&nbsp;</p>
+        </li>
+      </ul>
+      <ul id="L13784431">
+        <li>
+          <p>Learn about Open Science specifically in the Social Sciences: <a href="http://www.bitss.org/events/mooc-transparent-and-open-social-science/">http://www.bitss.org/events/mooc-transparent-and-open-social-science/</a>&nbsp;</p>
+        </li>
+        <li>
+          <p>Explore tools that can help implement open science practices: <a href="https://zenodo.org/record/1147025#.Wnib8yXwaM8">https://zenodo.org/record/1147025#.Wnib8yXwaM8</a>&nbsp;</p>
+        </li>
+        <li>
+          <p>The European Citizen Science Association runs a working group about the application open science in citizen science: <a href="https://ecsa.citizen-science.net/working-groups/citizen-science-and-open-science/">https://ecsa.citizen-science.net/working-groups/citizen-science-and-open-science/</a>&nbsp;</p>
+        </li>
+        <li>
+          <p>Check out the Turing Way handbook to explore guides on how to implement reproducible and collaborative research: <a href="https://the-turing-way.netlify.app/welcome">https://the-turing-way.netlify.app/</a></p>
+        </li>
+      </ul>
+    </div>
+    <section class="fnlist" role="doc-footnotes"></section>
+    <div class="article-part article-title" id="_5_0">Implementing Open Science Practices into a Citizen Science Project</div>
+    <div class="article-part article-richtext article-abstract">
+      <p>This step-by-step guide goes over how to implement different dimensions of open science in a citizen science project.&nbsp;</p>
+    </div>
+    <div class="article-part article-richtext article-body">
+      <p><em>By Bastian Greshake Tzovaras (ORCID iD: <a href="https://orcid.org/0000-0002-9925-9623" title="Bastian Greshake Tzovaras">0000-0002-9925-9623</a>), The Alan Turing Institute.</em></p>
+      <p><strong>Article DOI: <a href="https://doi.org/10.25815/qb6h-9915" title="https://doi.org/10.25815/qb6h-9915">10.25815/qb6h-9915</a></strong></p>
+      <h2 id="H9345714">Step 1: Mentoring for open science</h2>
+      <p>Coming from a research library, you might be the one to bring existing open science expertise to the world of citizen science and/or to more traditional research methodologies.&nbsp;</p>
+      <p>Ideally you will be involved from the start and able to think about these different dimensions already during the early planning stage of a citizen science project, but don’t worry if a project is already underway: some of them can also be put to use later on.</p>
+      <p>If you are new to mentoring for open science, in addition to the Quickstart Quide (<a href="https://doi.org/10.25815/j2nt-s512" title="https://doi.org/10.25815/j2nt-s512">10.25815/j2nt-s512</a><strong>; </strong>page 9) you can check out the following programs which provide mentoring and can serve as a good inspiration:&nbsp;</p>
+      <ul id="L43707031">
+        <li>
+          <p>Wikimedia Germany has an <em>Open Science</em> fellowship program in which mentors help their fellows to implement best practices in their research projects. See: Open Science Fellows Program 2016-2021 (<a href="https://doi.org/10.25815/vjcm-qk26" title="https://doi.org/10.25815/vjcm-qk26">10.25815/vjcm-qk26</a><strong>; </strong>page 28) in this guide.</p>
+        </li>
+        <li>
+          <p>The <em>Open Life Sciences</em> runs a mentorship program that supports individuals in learning and implementing open science practices. See: <a href="https://openlifesci.org/">https://openlifesci.org/</a>&nbsp;</p>
+        </li>
+      </ul>
+      <h2 id="H8491217">Step 2: Designing Engagement</h2>
+      <p>If a researcher has started their citizen science project before you joined, you might not be able to influence the engagement design, but understanding different levels of engagement remains relevant nevertheless: Citizen Science is a highly diverse field and how volunteers can be engaged in projects can differ substantially between them.</p>
+      <p>Potential ways that volunteers can be engaged in citizen science include:</p>
+      <ul id="L81693331">
+        <li>
+          <p>Framing research questions</p>
+        </li>
+        <li>
+          <p>Designing the research project and protocol</p>
+        </li>
+        <li>
+          <p>Collecting new data, e.g. from the environment or about themselves</p>
+        </li>
+        <li>
+          <p>Processing collected data, e.g. annotating images/videos, transcribing text</p>
+        </li>
+        <li>
+          <p>Analyzing and interpreting data, e.g. doing statistical analysis and reasoning about the results</p>
+        </li>
+        <li>
+          <p>All (extreme citizen science) or some of the above&nbsp;</p>
+        </li>
+      </ul>
+      <p>These choices influence how important different open science practices become and also might give constraints about how they can be implemented.&nbsp;</p>
+      <h2 id="H8063936">Step 3: Ethics in citizen science projects</h2>
+      <p>This step is typically closely aligned and interrelated with the actual design of a citizen science project. Depending on the choices in step 2 – and the nature of the data a project collects – this step is integral to understanding the constraints to an open science approach. Given that all citizen science makes use of volunteers which contribute their time and effort, implementing open science practices can ensure that the output generated by these efforts is fairly shared beyond the researchers that initiated the project. </p>
+      <p>Things to think about in this step:&nbsp;</p>
+      <ul id="L61824421">
+        <li>
+          <p>Do you offer meaningful engagement of volunteers that is not just unpaid labor?&nbsp;</p>
+        </li>
+        <li>
+          <p>Did the people affected by the science have input in the design of the research question and protocol?&nbsp;</p>
+        </li>
+        <li>
+          <p>Are you collecting personal data? If so, how are you weighing off the conflict between open data and protecting the privacy of participants?&nbsp;</p>
+        </li>
+        <li>
+          <p>Will the aggregated data be available as open data for everyone to use, including participants?&nbsp;</p>
+        </li>
+        <li>
+          <p>If so, when will it be published: After the conclusion of the project or live?&nbsp;</p>
+        </li>
+        <li>
+          <p>What about the code used to analyze the data? Will it be open source?</p>
+        </li>
+      </ul>
+      <p>Check out the following chapter in this guide to learn more about implementing ethical open science practices in a citizen science project and how to weigh the trade-offs between openness and privacy protection:&nbsp;</p>
+      <h2 id="H5925238">Step 4: Data collection I – Open Hardware</h2>
+      <p>Many data used in citizen science – e.g., environmental data such as temperature, pollution etc. – could be collected through commercial solutions. These typically come with limitations such as high prices &amp; lack of data export capabilities. Furthermore, the closed nature means that researchers have little opportunities to tweak how data is collected and participants can’t learn as much about the process. That’s why open hardware alternatives might be beneficial.</p>
+      <p>Things to think about:&nbsp;</p>
+      <ul id="L98623731">
+        <li>
+          <p>How expensive would open hardware alternatives be?&nbsp;</p>
+        </li>
+        <li>
+          <p>How simple or hard would an open hardware setup be? Will participants be able to contribute to them?</p>
+        </li>
+        <li>
+          <p>Are there scientific reasons for open over closed hardware or vice versa?</p>
+        </li>
+      </ul>
+      <p>You can learn more about open hardware for citizen science on (<strong><a href="https://doi.org/10.25815/ff2c-er61" title="https://doi.org/10.25815/ff2c-er61">10.25815/ff2c-er61</a>; </strong>page 20).&nbsp;</p>
+      <h2 id="H4389015">Step 4: Data collection II – Open Data</h2>
+      <p>In principle, the open sharing of data is arguably even more important for citizen science projects than for other research projects: When a group of volunteers spends time and effort in creating a data set, they should have the possibility to access and use that data as well. Generally, the minimum might be to release the final data set on a data repository such as Zenodo or even release new data as it comes in where possible. Data collected by volunteers might bring along the complication of containing personal data (e.g., geolocation data, data about the volunteer who collected the data). In those cases it becomes important to think about proper anonymization strategies. You can see an example of this on (<a href="https://doi.org/10.25815/3q4m-6t98" title="https://doi.org/10.25815/3q4m-6t98">10.25815/3q4m-6t98</a><strong>; </strong>p 31). </p>
+      <h2 id="H8873780">Step 5: Data analysis</h2>
+      <p>It is good practice to share all software code that was used to analyze the data alongside it. If you are lucky the citizen science project you contribute to might attract highly engaged and capable volunteers that can and want to dig into doing data analyses themselves, which will make sharing the code even more important.&nbsp;</p>
+      <p>For example, the use of <em>Jupyter Notebooks</em> for the code and services like <em>MyBinder</em> are ideal to share easily executable code. Read more about how to use these tools in the following FSCI class <a href="https://ciakovx.github.io/using_jupyter_notebooks.html" title="https://ciakovx.github.io/using_jupyter_notebooks.html">FSCI 2021: W25 Syllabus - Working with Scholarly Literature in R</a> <span class="citation">(Bjornen, Iakovakis, and Macken 2022)</span> which has a dedicated guide to using Notebook.</p>
+      <h2 id="H4844781">Step 6: Publishing results</h2>
+      <p>Just as for sharing code and data, when research relies on volunteer contributions it is imperative that those contributors can access the published results as well and thus should be published as open access.&nbsp;</p>
+      <p>Beyond this, there is a second bit that you should think about: Volunteers might have put in considerable effort into making a research project possible. Frequently volunteers are just acknowledged in the publications coming out of citizen science projects, but you should think about whether volunteers might actually be eligible for authorship, in particular when they have been heavily involved in many different aspects of the project.</p>
+    </div>
+    <section class="fnlist" role="doc-footnotes"></section>
+    <h1 class="article-bibliography-header" id="_5_1">Bibliography</h1>
+    <div class="csl-bib-body">
+      <div class="csl-entry">Bjornen, Kay, Clarke Iakovakis, and Megan Macken. 2022. “W25: Working with Scholarly Literature in R: Pulling, Wrangling, Cleaning, and Analyzing Structured Bibliographic Metadata.” https://doi.org/10.17605/OSF.IO/VPGBT.</div>
+    </div>
+    <div class="article-part article-title" id="_6_0">Ethical Practices for Citizen Science</div>
+    <div class="article-part article-richtext article-abstract">
+      <p>Ethical research requires ongoing self-critique and continually renewed action. Although working ethically takes extra effort and thoughtfulness, we have found that small steps and adjustments can make a huge difference. Ultimately, there are enormous and long-lasting gains to be made through citizen science. You have the power to create change.&nbsp;</p>
+    </div>
+    <div class="article-part article-richtext article-body">
+      <p><em>By Georgia Aitkenhead, The Alan Turing Institute; Sophia Batchelor (ORCID iD: <a href="https://orcid.org/0000-0002-8572-2058" title="https://orcid.org/0000-0002-8572-2058">0000-0002-8572-2058</a>), The University of Leeds; Kirstie Whitaker (ORCID iD: <a href="https://orcid.org/0000-0001-8498-4059" title="https://orcid.org/0000-0001-8498-4059">0000-0001-8498-4059</a>), The Alan Turing Institute.</em></p>
+      <p><strong>Article DOI: <a href="https://doi.org/10.25815/j3pv-3t92" title="https://doi.org/10.25815/j3pv-3t92">10.25815/j3pv-3t92</a></strong></p>
+      <p>This chapter discusses the ethics of citizen science and uses AutSPACEs as a case study of how we embed ethics into our citizen science in practice. We provide topics for reflection, and present practical steps to take so that your research is well placed to have a positive impact.&nbsp;</p>
+      <h2 id="H2050993">Inclusion and empowerment: “Nothing about us without us”</h2>
+      <p>The genuine inclusion of individuals from diverse backgrounds is both an ethical imperative and vital for scientific validity. Failing to reach and involve affected people, or distorting or diminishing their input, makes research less comprehensive and nuanced. Conversely, representative research, incorporating a rich range of perspectives, improves scientific validity, and delivers broader and more equitable impact.</p>
+      <p>Research processes greatly influence what opportunities citizen scientists have, what prejudice they encounter, how they think about themselves, and what support is available. The best way to make inclusive change is to ask your community directly what is needed and to tailor your methods of inclusion based on the response. Every group is made up of unique individuals and the default ways of working can actively exclude people and create barriers to participation. Ask early and often. Reflecting on these conversations - and their intersectional effects - will provide better insight than internal team brainstorming.</p>
+      <p>For example, intensive focus groups can be challenging for those with social anxiety. We encourage typed submissions, and give people opportunities to input after the event in their own time. These activities also provide pathways to contribute to decision making by people who are not able to attend synchronous events such as focus groups and co-working sessions.</p>
+      <p>People who are empowered have agency to affect outcomes. Ethical citizen science creates structures that deliver that power to community members and creators. To be truly empowering, research must put individuals in positions where they have a genuine ability to make significant choices and changes. This likely involves the research team giving up control over some of those decisions, ideally through a purposeful co-creation approach.</p>
+      <h2 id="H4207009">Safeguarding your community&nbsp;</h2>
+      <p>It is every researcher's responsibility to minimize the risk of harm to participants. Unlike other research methods, citizen science projects involve a fluctuating community where the numbers of participants, and the level of their involvement, can change over time. This flexibility should not undermine a commitment to all contributors’ informed consent, and we recommend the development of community guidelines, such as a Code of Conduct, to protect the safety and wellbeing of your community.&nbsp;</p>
+      <p>Informed consent relies on active communication between the researchers leading the project and the community members. Everyone needs to understand what the research is about, what benefits and risks there are to themselves, and how their contributions will be used. Informed consent should include what participants can expect when taking part, and the right to withdraw from participation at any time without having to provide a reason.</p>
+      <p>Informed consent and data management plans can appear to conflict with co-creation processes. The information should be available to everyone before they join the project, but that can mean the core research team defines goals and ambitions before community members are involved. We recommend planning your project in stages: an initial design phase, then a co-creation phase. The information available to community members can change between those two stages, and can be reflected upon through iterations of the project development.&nbsp;</p>
+      <p>A project Code of Conduct is particularly important when a community has diverse representation. In many cases, community members will not have the same implicit social engagement methods and ways of working. Making clear what behaviors are encouraged and which ones are not acceptable is an important way to build a safe and inclusive community.</p>
+      <p>We recommend co-writing the project Code of Conduct with members of the community so that it best reflects the group's needs. Make sure to consider a mediation plan and an escalation route. Name responsible people — ideally a team including citizen scientists — who can enforce the Code of Conduct. Keep anonymised records of reports and reflect regularly on whether the Code of Conduct is delivering on its role to safeguard vulnerable project members.</p>
+      <h2 id="H3134649">Scoping your community</h2>
+      <p>You need to know whose voices are needed if your citizen science project is to achieve the change it hopes to achieve in the world.</p>
+      <p>We recommend working through the following questions, and reflecting on the answers as your project develops:</p>
+      <ul id="L33130451">
+        <li>
+          <p>Who is your research likely to affect? Do the benefits outweigh any possible harms? What are the concerns of the people most at risk of being harmed?</p>
+        </li>
+        <li>
+          <p>Who will you directly collect data from? What additional information do they require in order to provide informed consent about how their data will be used?</p>
+        </li>
+        <li>
+          <p>Who is at risk of being left out from your research, including in the design process? What barriers will they face in participating in co-creation activities?</p>
+        </li>
+        <li>
+          <p>Who would be interested in participating in the creation of this citizen science project? What are their motivations for joining the team? When is the best time to bring them into the project?</p>
+        </li>
+      </ul>
+      <p>You may find that some of these answers conflict with each other. Different people will have different motivations and needs, and most research projects are not resourced well enough to support all engagement. Considering the impact of making easier or cheaper decisions on the long term impact of the project may help to invest in slower, but more inclusive processes from the start.</p>
+      <h2 id="H892149">Trust and transparency</h2>
+      <p>Trust and transparency is a vital part of ethical research. Not only is it necessary for productive collaboration and the empowerment of community members, it also contributes to a healthier ecosystem for science as a whole.</p>
+      <p>Rather than only focusing on communicating the final outputs of a research project, citizen science can be conducted most effectively if the focus is on communicating the process itself. These resources help your community understand how the project is being run, can bring in new participants and co-creators, and allow other citizen science projects to build on your learnings.</p>
+      <p>Working openly, transparently, and in a way which engages participants fully will provide many benefits, but is also likely to add complexity. Well defined plans with clear implementation pathways will mitigate many of the common pitfalls and support the successful and ethical implementation of citizen science research.</p>
+      <p>We recommend publicly sharing the following materials, and iterating on each of these resources as you progress:</p>
+      <ul id="L17378301">
+        <li>
+          <p>Project roadmap</p>
+        </li>
+        <li>
+          <p>Onboarding documentation</p>
+        </li>
+        <li>
+          <p>Protocols for data collection, processing, and communication (including design data)</p>
+        </li>
+        <li>
+          <p>Asynchronous community feedback (if aligned with data owners’ informed consent)</p>
+        </li>
+        <li>
+          <p>Newsletters</p>
+        </li>
+        <li>
+          <p>Meeting agendas and notes</p>
+        </li>
+        <li>
+          <p>Talks (with reusable slides)</p>
+        </li>
+        <li>
+          <p>Blog posts and publications for a general audience</p>
+        </li>
+        <li>
+          <p>Published papers</p>
+        </li>
+        <li>
+          <p>Data (if aligned with the data owners’ informed consent)</p>
+        </li>
+        <li>
+          <p>Code</p>
+        </li>
+      </ul>
+      <p>As we described above, inclusion and empowerment are continuous processes. As your community grows, you have the chance to redesign and redevelop your inclusion processes based on increasing knowledge. As you build trust, through transparent communication, so will you grow your community in a virtuous circle of inclusion.</p>
+      <h2 id="H3497662">Sharing opportunities</h2>
+      <p>Ethical research requires both a commitment to practical action and self-reflection. A research position often comes with many privileges: you may have credibility and opportunities through your institution, platforms to speak and share knowledge, such as via conferences or submissions of papers, and opportunities to grow networks and collaborate.&nbsp;</p>
+      <p>Where possible, we recommend that researchers seek to share the privileges and access that their position affords them by recruiting co-authors, co-presenters, and co-facilitators from the community. Where possible, hand over leadership of tasks and decisions and give credit to individual contributors. Focus on how paid team members can provide the infrastructure and support for volunteer community members to take the project forwards.</p>
+      <p>Incorporating ethical considerations around inclusion, empowerment, safeguarding, trust and transparency deliver greater societal impact and more meaningful engagement for researchers and citizen scientist creators alike. Working together we can distribute power to people who are traditionally underrepresented in science, and scale our engagement for the greatest global impact.</p>
+      <h2 id="H5615755"><span class="underline">Case Study: AutSPACEs</span><strong>&nbsp;</strong></h2>
+      <p><strong>Web: <a href="https://www.turing.ac.uk/research/research-projects/citizen-science-platform-autistica" title="https://www.turing.ac.uk/research/research-projects/citizen-science-platform-autistica">AutSPACEs</a> </strong></p>
+      <p><strong>AutSPACEs is a community-led citizen science project seeking to make environments more accessible for autistic people.&nbsp;&nbsp;</strong></p>
+      <p><strong>Around 90% of autistic people process sensory information differently to non-autistic people. As a result, many public spaces are not well designed for autistic people. They may be too brighter of, busy or loud.</strong></p>
+      <p><strong>The Alan Turing Institute is working with Autistica and Open Humans to use citizen science to understand what autistic people would like to change about these public spaces. We are building an online platform openly on GitHub, and make the code, process documentation, and focus group design data publicly available.</strong></p>
+      <p><strong>Autistic people have been involved throughout the research cycle, including setting priorities, making research design decisions, interpreting data, and co-authoring and co-presenting work. We run ‘Meet Up’ sessions twice per month to welcome new members and provide support for ongoing initiatives including online moderation and platform infrastructure.</strong></p>
+    </div>
+    <section class="fnlist" role="doc-footnotes"></section>
+    <div class="article-part article-title" id="_7_0">Open Hardware <span class="comment" data-id="3371880869">Overview</span></div>
+    <div class="article-part article-richtext article-abstract">
+      <p>Learn how opening the tools for research can help your community produce more &amp; better science.</p>
+    </div>
+    <div class="article-part article-richtext article-body">
+      <p><em>By Julieta Arancio (ORCID iD: <a href="https://orcid.org/0000-0002-8624-4182" title="https://orcid.org/0000-0002-8624-4182">0000-0002-8624-4182</a>), Drexel Universty.</em></p>
+      <p><strong>Article DOI:</strong> <strong><a href="https://doi.org/10.25815/ff2c-er61" title="https://doi.org/10.25815/ff2c-er61">10.25815/ff2c-er61</a></strong></p>
+      <p>The challenges we are facing in the 21st century call for a more democratic, collaborative, <em>all hands on deck</em> approach to science and technology. But to participate in research, people need tools. Ideally, tools that would allow anyone to locally pursue the research questions they are seeking to answer.</p>
+      <p>During the last decade, following the ideas of <a href="https://en.wikipedia.org/wiki/Free_and_open-source_software">free and open source software</a> and seizing the opportunities opened by <a href="https://en.wikipedia.org/wiki/Maker_culture">the maker movement</a>, more and more people started building their own tools for research. Taking the “open” in open science one step further, they release their creations or modifications under open licenses, sharing them through different internet platforms so anyone can build, study, modify, or commercialize them.</p>
+      <p>This practice, or “open hardware for science”, is growing worldwide. But why is it happening?</p>
+      <h2 id="H1433413">The problem with science tools</h2>
+      <p>Today, researchers in academia have a hard time making science hardware work for their own needs. Science tools can be considered what we call black boxes: we know what goes in and what we get back, but we have limited or no information on their internal workings or design. This is a significant problem for science in terms of reproducibility, but it also has other consequences.</p>
+      <p>For scientists, black boxes are a problem because they make it difficult to source, maintain and adapt tools to different needs. Science often demands adapting experimental settings to new research scenarios; collaborative research with communities or citizen science projects often presents needs that were not originally conceived in the design of science hardware. The lack of access to blueprints combined with the niche, highly-specialized nature of science increases labs dependence on centralized vendors; only some can afford the extra costs and delays.</p>
+      <p>Moreover, most of the tools used in research today are unevenly distributed. Science infrastructure is usually available to highly skilled experts, well-funded laboratories, and renowned institutions in countries with high investments in science and technology. For many scientists in the Global South, access to the tools for research is hampered by prohibitive import taxes, lack of access to technical support, or inability to source spare parts. It becomes even more difficult for those communities aiming to participate in research in non-conventional settings, outside academia.</p>
+      <figure id="F90508581" class="aligned-center image-width-100" data-aligned="center" data-width="100" data-category="figure"><img src="images/2e3f0d06-beeb-42f0-b268-6d3a750f60a0.png">
+        <figcaption><span class="label-counter" data-book-counter="2" data-chapter-counter="1">Figure</span><span class="text">Generic Lab Equipment project, by <a href="http://www.gaudi.ch/GaudiLabs">GaudiLabs</a>.</span></figcaption>
+      </figure>
+      <p></p>
+      <h2 id="H6093484">What do we share in open hardware?</h2>
+      <p>Many people are familiar today with the concept of free and open source software, where the source code of a computer program is openly licensed and shared. In open hardware, as we refer to physical objects, the definition of “source code” is slightly more complex.</p>
+      <p>According to the <strong>Open Source Hardware Association (OSHWA)</strong>, open hardware is defined as:</p>
+      <blockquote>
+        <p>a term for tangible artifacts — machines, devices, or other physical things — whose design has been released to the public in such a way that anyone can make, modify, distribute, and use those things.</p>
+      </blockquote>
+      <p>Hardware projects likely contain, beyond their functional components, software enabling the use of the device, documentation containing the blueprints plus how to use and how to contribute to the project, and sometimes branding. Each of these components needs to be licensed in a way that ensures that downstream users can use and modify the device:</p>
+      <ul id="L98492081">
+        <li>
+          <p>Hardware can be licensed using specific open licences developed by the open hardware community;</p>
+        </li>
+        <li>
+          <p>software can be opened by applying an OSI-approved open licence;</p>
+        </li>
+        <li>
+          <p>documentation is licensed using Creative Commons licences;</p>
+        </li>
+        <li>
+          <p>some projects protect their brand by using trademarks.</p>
+        </li>
+      </ul>
+      <p>You can learn more about licences and the different components of open hardware projects in the <a href="https://certification.oshwa.org/process.html">OSHWA Open Hardware Certification guide</a>. </p>
+      <h2 id="H3817884"><span class="underline">Infobox: What is open hardware for science?</span></h2>
+      <p><strong>GOSH, the <a href="http://openhardware.science">Global Open Science Hardware</a> </strong><em><strong>community</strong></em><strong> defines “Open Science Hardware” as:</strong></p>
+      <blockquote>
+        <p><strong>any piece of hardware used for scientific investigations that can be obtained, assembled, used, studied, modified, shared, and sold by anyone.</strong></p>
+      </blockquote>
+      <p><strong>The concept goes beyond standard lab equipment to include auxiliary materials such as </strong><em><strong>sensors, biological reagents, analogue and digital electronic components</strong></em><strong>.</strong></p>
+      <p><strong>Physical tools for science include low-cost sensors that monitor the environment, desktop 3D printers and microprocessors enabling customized equipment, <a href="https://www.opensourceimaging.org/">biomed equipment</a>, experimental setups enabling fully reproducible science, amongst <a href="https://www.wilsoncenter.org/publication/open-hardware-opportunity-build-better-science">many others worldwide</a>. See the featured projects section for highlights on open hardware for science. <span class="citation">(<b>Novak</b> and <b>Parker</b>&nbsp; 2020)</span></strong></p>
+      <figure id="F99633311" class="aligned-center image-width-75" data-aligned="center" data-width="75" data-category="figure"><img src="images/1eff4020-66b0-474a-9fc6-8a0539b823b8.png">
+        <figcaption><span class="label-counter" data-book-counter="3" data-chapter-counter="2">Figure</span><span class="text">Balloon mapping kit from <a href="http://publiclab.org">Public Lab</a>, for community science projects using aerial photography.</span></figcaption>
+      </figure>
+      <p></p>
+      <h2 id="H186333"><strong>Who is making and using open hardware for science?</strong></h2>
+      <p>One of the most interesting aspects of open hardware for science is that people in multiple settings can build or adapt the tools needed to participate in research. Or as mentioned in the GOSH Manifesto, open hardware democratizes science by allowing research to happen in places where we would not necessarily see it happening.&nbsp;</p>
+      <p>Researchers in academia are building open hardware to overcome the limitations of closed source equipment, both in well-funded and resource-limited contexts. Citizen scientists are creating and adapting tools in collaboration with researchers, in fields that range from environmental monitoring to do-it-yourself biology. Artists develop open hardware for art/science projects; activists in need of data or teachers looking to implement new methods in class are also users of open science hardware. Open hardware is also at the core of big and small businesses selling related products and services.</p>
+      <p>It is quite common to find open science hardware practitioners gathering in communities around a particular technology, or a specific field of interest. Microscopy is a rich field in open hardware, with designs ranging from ultra low-cost (&lt;$10) and smartphone-adapted ($5-$20), low-cost (&lt;$200) standard microscopes for research and diagnostic microscopy, and customised high-end ($10-50k) microscopes for cutting edge imagery and specialized research applications. Conservation ecology is another example of a very active field for open science hardware: institutions organize <a href="https://conservationxlabs.com/digital-makerspace">prize challenges</a>, low-cost devices are used in citizen science projects worldwide, and open projects make education affordable in topics such as oceanography or neuroscience.</p>
+      <h2 id="H9840669"><strong>How are people building &amp; sharing open hardware in science?</strong></h2>
+      <p>Differently from open source software, open hardware designs are not hosted in one or two main platforms like GitHub or GitLab. Projects are usually shared in online websites exclusively dedicated to hosting open hardware, such as hackaday, hackster.io, thingiverse, instructables, Wikifactory… The list is quite big. These websites usually have a category for “science” projects. There are also search engines by domain, see the section “Connecting to open hardware communities”.</p>
+      <p>Especially in citizen science, making files open and findable isn’t enough; usually the aim is to increase the chances of adoption of a project. The keyword here is <strong>good documentation</strong>. The word “documentation” in open hardware refers to:</p>
+      <ul id="L46744461">
+        <li>
+          <p>sharing the design files needed for building the device (such as those that go into a 3D printer),</p>
+        </li>
+        <li>
+          <p>sharing electronics schematics when applicable,</p>
+        </li>
+        <li>
+          <p>writing detailed user guides, including bill of materials, assembly instructions, FAQs,</p>
+        </li>
+        <li>
+          <p>writing clear contributor guidelines for people who want to adapt or take your project further,</p>
+        </li>
+        <li>
+          <p>sharing the licences used in your project.</p>
+        </li>
+      </ul>
+      <p>Projects with complete and updated documentation allow more people to engage. Some include attractive visuals, tutorials for assembling devices, animations, or translated documentation in dedicated websites. Properly documenting an open hardware project takes time, but it makes the difference between those initiatives that are widely adopted and those with no contributions.</p>
+      <h2 id="H5389706"><span class="underline">Infobox: Distributed manufacturing</span></h2>
+      <p><strong>Probably one of the most interesting features of open hardware is the possibility of manufacturing a device somewhere else from where it was developed. Following this model, a conservation group in Brazil could quickly start contributing data to a global map by downloading the source files and building open environmental monitors developed in Singapore.</strong></p>
+      <p><strong>However, for this model to work there are some considerations to have in mind. Some components and spare parts are not available in all parts of the world due to import restrictions and prohibitive costs. In the same vein, not everyone has access to digital fabrication tools. For citizen science projects, in general the rule is the simpler, the better. Good practice includes using as generic parts as possible in the bill of materials and indicating easy replacements of non-generic parts or procedures.</strong></p>
+      <figure id="F37447781" class="aligned-center image-width-75" data-aligned="center" data-width="75" data-category="figure"><img src="images/3309b95f-d63d-4b5b-86de-097b43fa0108.png">
+        <figcaption><span class="label-counter" data-book-counter="4" data-chapter-counter="3">Figure</span><span class="text">People take part in the <a href="https://trendinafrica.org/">TReND</a> 2018 Open Labware Course in Cape Town, South Africa. Credit: Agnieszka Pokrywka.</span></figcaption>
+      </figure>
+      <p></p>
+      <h2 id="H3352054"><strong>Which are the benefits of open hardware?</strong></h2>
+      <p>Open hardware presents a wide variety of advantages for research and innovation. <span class="citation">(<b>Dosemagen</b>, <b>Molloy</b>, and <b>Parker</b> 2021)</span></p>
+      <p><strong>Open hardware links science and society.</strong> Its collaborative nature provides a strong foundation to more closely connect scientific research and tools with the priorities of society, by allowing for local adaptations of tools to emerge in response to these priorities. Using open hardware, communities quickly learn and adapt tools to new research scenarios, or when facing environmental or humanitarian disasters.</p>
+      <p><strong>Open hardware accelerates science. </strong>In open hardware, a component built to serve one project’s needs can also be used for many other things. As in open source software, this modular design of “building block” tools, plus distributed manufacturing, enable the emergence of a more diverse ecosystem of tools responding to different needs. Moreover, collaborative practice and access to information in open hardware facilitates coordination efforts in research collaborations.</p>
+      <p><strong>Open Hardware Supports Better and More Accessible STEM Education. </strong>It provides a unique opportunity for students to build, troubleshoot, and understand data outputs both independently and as a part of a team. The combination of virtual learning due to the Covid-19 pandemic and the availability of open hardware designs has allowed students to build their own tools for scientific inquiry from objects in their homes or locally available supplies, and provided more equitable access through lowering cost barriers.</p>
+      <h2 id="H2244891"><strong>Libraries as hubs for science tools</strong></h2>
+      <p>The mission of open hardware for science aligns well with ongoing work at libraries: we think everyone should be able to access the information they need for pursuing research, and that includes access to hardware designs. Libraries are currently helping researchers make their work more accessible in terms of publications and data; there is ongoing work in the open hardware community to activate libraries as hubs for open hardware for science. Connect with us at <a href="https://forum.openhardware.science">https://forum.openhardware.science</a>!</p>
+      <h2 id="H7229447"><strong>Connecting to open hardware communities</strong></h2>
+      <p>Join the GOSH forum and ask any questions you have related to open science hardware practice and research. Visit <a href="https://forum.openhardware.science">https://forum.openhardware.science</a></p>
+      <p>Find open hardware projects, no matter which platform they are in, at <a href="https://search.openknowhow.org/">https://search.openknowhow.org/</a></p>
+      <p>Find open hardware projects for neuroscience at <a href="https://open-neuroscience.com/tag/hardware">https://open-neuroscience.com/tag/hardware</a></p>
+      <p>Find community science projects using open hardware at <a href="https://publiclab.org">https://publiclab.org</a></p>
+      <p>Find hardware projects by Sustainable Development Goals at <a href="https://www.appropedia.org/Appropedia:Advanced_search">https://www.appropedia.org/Appropedia:Advanced_search</a></p>
+      <p>Host an event at your local institution! Here is a guide with all the different events you can run related to open science hardware <a href="https://openhardware.science/2021/08/18/gosh-community-events-framework/">https://openhardware.science/2021/08/18/gosh-community-events-framework/</a>&nbsp;&nbsp;</p>
+      <p>Join a mentorship program for acquiring the best practices for open hardware projects, at <a href="https://openhardware.space">https://openhardware.space</a></p>
+      <p>Learn more about recommended licences for open hardware at <a href="https://certification.oshwa.org/process/hardware.html">https://certification.oshwa.org/process/hardware.html</a></p>
+      <p>Learn more about the open hardware certification program from the Open Source Hardware Association at <a href="https://certification.oshwa.org">https://certification.oshwa.org</a><span class="comment" data-id="3992972082">&nbsp;</span></p>
+      <h2 id="H2414262"><span class="underline">Featured projects</span></h2>
+      <h3 id="H4094029"><strong>Audiomoth</strong></h3>
+      <p><strong>Web: <a href="https://www.openacousticdevices.info/">https://www.openacousticdevices.info/</a></strong></p>
+      <figure id="F31270231" class="aligned-left image-width-50" data-aligned="left" data-width="50" data-category="figure"><img src="images/62ad4383-d92f-435f-bdbb-e3cc4da36bbd.png">
+        <figcaption><span class="label-counter" data-book-counter="5" data-chapter-counter="4">Figure</span><span class="text">Audiomoth v1.2.0, <a href="https://www.openacousticdevices.info/audiomoth" title="https://www.openacousticdevices.info/audiomoth">https://www.openacousticdevices.info/audiomoth</a></span></figcaption>
+      </figure>
+      <p><strong>AudioMoth is a low-cost audio receiver that can be placed in the open environment for biodiversity research. It can detect sounds from audible to ultrasonic frequencies, and is principally used to monitor wildlife and record incidents of human exploitation of nature, such as monitoring the relationship between illegal activities and jaguar and puma populations in unprotected Mexican forest.</strong></p>
+      <p><strong>Due to its low cost, the tool has been used in a variety of unexpected applications outside of conservation. For example, the tool is used to study the health risks associated with noise pollution that is inaudible to humans.</strong></p>
+      <p><strong>The original research was funded by the Engineering and Physical Sciences Research Council and the Natural Environmental Research Council in the UK. Open Acoustic Devices currently operates as a business. The tool can be purchased or made individually using the publicly available design files.</strong></p>
+      <h3 id="H6856963"><strong>OpenFlexure</strong></h3>
+      <p><strong>Web: <a href="https://openflexure.org/">https://openflexure.org/</a></strong></p>
+      <figure id="F87559741" class="aligned-left image-width-50" data-aligned="left" data-width="50" data-category="figure"><img src="images/e5a62b59-cec0-48c0-bad3-8e52d38f2970.png">
+        <figcaption><span class="label-counter" data-book-counter="6" data-chapter-counter="5">Figure</span><span class="text">OpenFlexure</span></figcaption>
+      </figure>
+      <p><strong>OpenFlexure is a 3D printed microscope with high precision mechanics that can use either traditional microscope objectives or a Raspberry Pi camera as the optics lens. Achieving submicron stage precision and resolution of a conventional microscope, the microscope can be used for education or research, and is undergoing trials for use in healthcare.&nbsp;</strong></p>
+      <p><strong>The idea of a high-precision 3D printed microscope was born at University of Bath, UK, with the goal to make microscopes more accessible to research institutions and schools in low- and middle- income countries. OpenFlexure’s currently co-developed between Bath and STICLab, a makerspace in Tanzania. Their tools are used in all parts of the world, with exploration into potential applications such as detecting bacteria contamination in water or diagnosing malaria.</strong></p>
+      <p><strong>OpenFlexure’s open and modular design allows users to customise their tools, such as the <a href="https://publiclab.org/wiki/basic-microscope">Public Lab microscope for environmental monitoring</a>. Because most parts are 3D printed, “if you can build it locally, you can mend it locally,” avoiding the need for expensive service contracts.</strong></p>
+      <p></p>
+    </div>
+    <section class="fnlist" role="doc-footnotes"></section>
+    <h1 class="article-bibliography-header" id="_7_1">Bibliography</h1>
+    <div class="csl-bib-body">
+      <div class="csl-entry"><b>Dosemagen</b>, <b>Shannon</b>, &nbsp;<b>Jenny</b> <b>Molloy</b>, and <b>Alison</b> <b>Parker</b>. 2021. “Open Hardware: An Opportunity to Build Better Science.” https://www.wilsoncenter.org/publication/open-hardware-opportunity-build-better-science.</div>
+      <div class="csl-entry"><b>Novak</b>, <b>Alexandra</b>, and <b>Alison</b> <b>Parker</b>&nbsp;. 2020. “Building Blocks for Better Science: Case Studies in Low-Cost and Open Tools for Science.” https://www.wilsoncenter.org/publication/building-blocks-better-science-case-studies-low-cost-and-open-tools-science.</div>
+    </div>
+    <div class="article-part article-title" id="_8_0">Open Science Fellows Program 2016-2021</div>
+    <div class="article-part article-richtext article-abstract">
+      <p>Building an active community of practice.</p>
+      <figure id="F87047021" class="aligned-center image-width-50" data-aligned="center" data-width="50" data-category="figure"><img src="images/72933a19-5b1a-467e-b8fb-8dda8270a686.png">
+        <figcaption><span class="label-counter" data-book-counter="7" data-chapter-counter="1">Figure</span><span class="text">About The Open Science Fellows Program</span></figcaption>
+      </figure>
+    </div>
+    <div class="article-part article-richtext article-body">
+      <p></p>
+      <p>By Sabine Müller and Christopher Schwarzkopf.</p>
+      <p><strong>Article DOI:</strong> <strong><a href="https://doi.org/10.25815/vjcm-qk26" title="https://doi.org/10.25815/vjcm-qk26">10.25815/vjcm-qk26</a></strong></p>
+      <p>The significance of Open Science for tackling societal challenges has become particularly pertinent in the Covid-19-Pandemic. Open Science cultivates free access to knowledge for the benefit of society, fostering civic participation and equity in education.&nbsp;</p>
+      <p>Since Open Science is not standard practice for researchers across disciplines yet, there is a conspicuous lack of learning opportunities for early career researchers.&nbsp;With the <a href="https://de.wikiversity.org/wiki/Wikiversity:Fellow-Programm_Freies_Wissen" title="https://de.wikiversity.org/wiki/Wikiversity:Fellow-Programm_Freies_Wissen">Open Science Fellows Program</a>, Wikimedia Deutschland (WMDE) addressed this crucial lack within the academic qualification process: each year it encouraged about 20 researchers to adopt principles of Open Science in their research and publication practices from early on. It aimed — and accomplished — to&nbsp; build&nbsp; competency, expand the community of practice, and to foster institutional and cultural change. Crucial elements were the mentoring relationship, peer-to-peer learning opportunities, and a stipend which gave fellows the freedom to pursue their own ideas. The Open Science Fellows Program, thus, helped establish Open Science practices in German academia.</p>
+    </div>
+    <section class="fnlist" role="doc-footnotes"></section>
+    <div class="article-part article-title" id="_9_0">Wikimedians <span class="comment" data-id="3359721675">In Residence</span></div>
+    <div class="article-part article-richtext article-abstract">
+      <p>A dedicated role can connect science institutions’ work with the Wikimedia contributor communities.</p>
+    </div>
+    <div class="article-part article-richtext article-body">
+      <p><em>By Martin Poulter (ORCID iD: <a href="https://orcid.org/0000-0002-8738-9498" title="https://orcid.org/0000-0002-8738-9498">0000-0002-8738-9498</a>), University of Bristol.</em></p>
+      <p><strong>Article DOI: </strong><a href="https://doi.org/10.25815/9m0x-t164" title="https://doi.org/10.25815/9m0x-t164">10.25815/9m0x-t164</a></p>
+      <p>Freely sharing the outputs of citizen science under free licences, on popular platforms like Wikipedia, demonstrates public benefit. This in turn gives other citizen scientists a motive to contribute. Institutions are sometimes tempted by non-commercial licences, but an invitation to contribute to the public good is more appealing than to contribute to one entity’s commercial benefit.</p>
+      <p>Organizations that have appointed a Wikimedian In Residence (WIR) include the Royal Society of Chemistry, ORCID, the Wellcome Library, and universities or university libraries in many countries. WIRs can share content on Wikimedia platforms and monitor improvements made by the community. A set of images can be uploaded&nbsp; to Wikimedia Commons where the community translate captions or descriptions into more languages. Secondary data can be uploaded to Wikidata where labels can be translated, or to Mix’n’Match where identifiers are matched to identifiers from other databases.</p>
+      <p>Learn more at <strong>Meta: Wikimedian in residence</strong>: <a href="https://meta.wikimedia.org/wiki/Wikimedian_in_residence">https://meta.wikimedia.org/wiki/Wikimedian_in_residence</a>.</p>
+      <figure id="F56123581" class="aligned-center image-width-75" data-aligned="center" data-width="75" data-category="figure"><img src="images/f10e9f7a-be64-4d7c-918b-23e26b67185d.png">
+        <figcaption><span class="label-counter" data-book-counter="8" data-chapter-counter="1">Figure</span><span class="text">Interactive map of Wikimedians in residence listed, sorted by year. From Wikipedia <a href="https://en.wikipedia.org/wiki/Wikipedian_in_residence" title="https://en.wikipedia.org/wiki/Wikipedian_in_residence">Wikipedian in residence</a> (<a href="https://creativecommons.org/licenses/by/4.0/deed.en" title="https://creativecommons.org/licenses/by/4.0/deed.en">Creative Commons Attribution 4.0 International</a> - Thomas Shafee 2019.) <a href="https://query.wikidata.org/embed.html#%23defaultView%3AMap%0ASELECT%20%20%3Femployer%20%3FemployerLabel%20%3Fitem%20%3FitemLabel%20%3Fcoord%20%3Flayer%20%3Fstartyear%20%3Flength%20%7B%0A%20%20%3Fitem%20p%3AP106%20%3Fwir%20.%0A%20%20%3Fwir%20ps%3AP106%20wd%3AQ3809586%20.%0A%20%20OPTIONAL%20%7B%20%3Fwir%20pq%3AP582%20%3Fend%20.%20%3Fwir%20pqv%3AP582%20%5B%20wikibase%3AtimePrecision%20%3Ftp_end%5D%20%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fwir%20pq%3AP580%20%3Fstart%20.%20%3Fwir%20pqv%3AP580%20%5B%20wikibase%3AtimePrecision%20%3Ftp_start%5D%20%7D%0A%20%20BIND(IF(%3Ftp_end%3D%3Ftp_start%2C%0A%20%20%20%20%20%20%20%20%20%20CONCAT('duration%3A'%2C%20STR(12*(YEAR(%3Fend)-YEAR(%3Fstart))%2BMONTH(%3Fend)-MONTH(%3Fstart))%2C%20'%20months')%2C%0A%20%20%20%20%20%20%20%20%20%20'duration%3A%20not%20calculable')%20AS%20%3Flength)%0A%20%20BIND(IF(!BOUND(%3Fend)%2C%20%20%20'no%20end%20date'%2C%20%20%20CONCAT('end%3A%20'%2C%20%20%20STR(YEAR(%3Fend))))%20%20%20AS%20%3Flayer)%0A%20%20BIND(IF(!BOUND(%3Fstart)%2C%20'no%20start%20date'%2C%20CONCAT('start%3A%20'%2C%20STR(YEAR(%3Fstart))))%20AS%20%3Fstartyear)%0A%20%20OPTIONAL%20%7B%20%3Fwir%20pq%3AP937%20%3Flocation.%20%3Flocation%20wdt%3AP625%20%3Fcoord.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fwir%20pq%3AP108%20%3Femployer%20%7D%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%2Cen%22.%20%7D%0A%7D%0AORDER%20BY%20DESC(%3Fend)" title="https://query.wikidata.org/embed.html#%23defaultView%3AMap%0ASELECT%20%20%3Femployer%20%3FemployerLabel%20%3Fitem%20%3FitemLabel%20%3Fcoord%20%3Flayer%20%3Fstartyear%20%3Flength%20%7B%0A%20%20%3Fitem%20p%3AP106%20%3Fwir%20.%0A%20%20%3Fwir%20ps%3AP106%20wd%3AQ3809586%20.%0A%20%20OPTIONAL%20%7B%20%3Fwir%20pq%3AP582%20%3Fend%20.%20%3Fwir%20pqv%3AP582%20%5B%20wikibase%3AtimePrecision%20%3Ftp_end%5D%20%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fwir%20pq%3AP580%20%3Fstart%20.%20%3Fwir%20pqv%3AP580%20%5B%20wikibase%3AtimePrecision%20%3Ftp_start%5D%20%7D%0A%20%20BIND(IF(%3Ftp_end%3D%3Ftp_start%2C%0A%20%20%20%20%20%20%20%20%20%20CONCAT('duration%3A'%2C%20STR(12*(YEAR(%3Fend)-YEAR(%3Fstart))%2BMONTH(%3Fend)-MONTH(%3Fstart))%2C%20'%20months')%2C%0A%20%20%20%20%20%20%20%20%20%20'duration%3A%20not%20calculable')%20AS%20%3Flength)%0A%20%20BIND(IF(!BOUND(%3Fend)%2C%20%20%20'no%20end%20date'%2C%20%20%20CONCAT('end%3A%20'%2C%20%20%20STR(YEAR(%3Fend))))%20%20%20AS%20%3Flayer)%0A%20%20BIND(IF(!BOUND(%3Fstart)%2C%20'no%20start%20date'%2C%20CONCAT('start%3A%20'%2C%20STR(YEAR(%3Fstart))))%20AS%20%3Fstartyear)%0A%20%20OPTIONAL%20%7B%20%3Fwir%20pq%3AP937%20%3Flocation.%20%3Flocation%20wdt%3AP625%20%3Fcoord.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fwir%20pq%3AP108%20%3Femployer%20%7D%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22%5BAUTO_LANGUAGE%5D%2Cen%22.%20%7D%0A%7D%0AORDER%20BY%20DESC(%3Fend)">Interactive map</a>. </span></figcaption>
+      </figure>
+    </div>
+    <section class="fnlist" role="doc-footnotes"></section>
+    <div class="article-part article-title" id="_10_0">Wiki Platforms for Citizen Science</div>
+    <div class="article-part article-richtext article-abstract">
+      <p>Wikipedia and other wiki platforms are being used to share work between professional teams and citizen science communities.</p>
+    </div>
+    <div class="article-part article-richtext article-body">
+      <figure id="F35289881" class="aligned-center image-width-50" data-aligned="center" data-width="50" data-category="figure"><img src="images/1c0b1803-0377-45e5-acaa-f1058e48b6b4.jpg">
+        <figcaption><span class="label-counter" data-book-counter="9" data-chapter-counter="1">Figure</span><span class="text"><a href="https://en.wikipedia.org/wiki/Piwi#cite_note-pmid15800637-1" title="https://en.wikipedia.org/wiki/Piwi#cite_note-pmid15800637-1">Piki domain</a>.</span></figcaption>
+      </figure>
+      <p><em>By Martin Poulter (ORCID iD: <a href="https://orcid.org/0000-0002-8738-9498" title="https://orcid.org/0000-0002-8738-9498">0000-0002-8738-9498</a>), University of Bristol.</em></p>
+      <p><strong>Article DOI: <a href="https://doi.org/10.25815/qbnv-2b65" title="https://doi.org/10.25815/qbnv-2b65">10.25815/qbnv-2b65</a></strong></p>
+      <p>Wikipedia and other Wikimedia projects are well suited to support collaboration between professional and citizen scientists, since they have existing communities of volunteer contributors, they track all changes made, and they have APIs which share information about specific content or specific edits.</p>
+      <p>An outstanding example of this comes from <a href="https://www.ebi.ac.uk/interpro/" title="https://www.ebi.ac.uk/interpro/">PFAM</a> (protein families database<em>) </em>and <a href="https://rfam.org/" title="https://rfam.org/">RFAM</a> (RNA families database) which have actively solicited public input via Wikipedia and Wikidata. While vandalism is a theoretical possibility, disruption of this content has been negligible. On the other hand, there are people with the education, enthusiasm, and spare time to make serious improvements; the wiki platforms make that easy. Through the API, the database owners monitor changes to the wiki articles and choose what to harvest back into the official database. For further information see the paper: <a href="https://academic.oup.com/nar/article/40/D1/D9/2903379?login=false" title="https://academic.oup.com/nar/article/40/D1/D9/2903379?login=false">Making your database available through Wikipedia: the pros and cons</a>. <span class="citation">(Finn, Gardner, and Bateman 2012)</span></p>
+    </div>
+    <section class="fnlist" role="doc-footnotes"></section>
+    <h1 class="article-bibliography-header" id="_10_1">Bibliography</h1>
+    <div class="csl-bib-body">
+      <div class="csl-entry">Finn, R. D., P. P. Gardner, and A. Bateman. 2012. “Making your database available through Wikipedia: the pros and cons.” <i>Nucleic Acids Res</i> 40 (Database issue): 9–12. https://doi.org/https://doi.org/10.1093/nar/gkr1195.</div>
+    </div>
+    <div class="article-part article-title" id="_11_0">Citizen Science Using Personal Data</div>
+    <div class="article-part article-richtext article-abstract">
+      <p>Each of us is collecting more and more personal data. How can it be used for citizen science in an ethical way?</p>
+    </div>
+    <div class="article-part article-richtext article-body">
+      <p><em>By Bastian Greshake Tzovaras (ORCID iD: <a href="https://orcid.org/0000-0002-9925-9623" title="Bastian Greshake Tzovaras">0000-0002-9925-9623</a>), The Alan Turing Institute.</em></p>
+      <p><strong>Article DOI: <a href="https://doi.org/10.25815/3q4m-6t98" title="https://doi.org/10.25815/3q4m-6t98">10.25815/3q4m-6t98</a></strong></p>
+      <p>Thanks to technological advances it’s now easier than ever for people to collect their own data. This can be done through mobile apps, wearable devices, low-cost genetic testing and many other ways. This data is increasingly becoming of interest for use in citizen science.&nbsp;</p>
+      <p>Implementing tools to collect such data, managing its secure storage and handling participants giving consent for data use can be challenging. The Open Humans platform, run by a non-profit organization, provides a framework for enabling both academic and participant-led citizen science that is used by a number of citizen science projects already, e.g., the AutSpaces project highlighted in guide article Ethical Practices for Citizen Science (<a href="https://doi.org/10.25815/j3pv-3t92" title="https://doi.org/10.25815/j3pv-3t92">10.25815/j3pv-3t92</a><strong>; </strong>page 16).&nbsp;</p>
+      <p>An example of a recent, community-led research project is <em>Quantified Flu</em>, in which participants collect wearable data and symptom reports to understand how wearables can provide early warning signs of infections.</p>
+      <p>Link to further information: <a href="https://www.openhumans.org">https://www.openhumans.org</a></p>
+      <figure id="F32461451" class="aligned-center image-width-50" data-aligned="center" data-width="50" data-category="figure"><img src="images/94a3b06f-7623-47c3-8a95-3cfd68c28f3d.png">
+        <figcaption><span class="label-counter" data-book-counter="10" data-chapter-counter="1">Figure</span><span class="text">Quantified Flu - <a href="https://quantifiedflu.org/" title="https://quantifiedflu.org/">https://quantifiedflu.org/</a></span></figcaption>
+      </figure>
+      <p><br></p>
+    </div>
+    <section class="fnlist" role="doc-footnotes"></section>
+  </body>
+</html>
