@@ -18,3 +18,5 @@
         <p id="p-15">Print and PDF design template (CC BY-SA). Multi-format template (CC BY-SA). Fonts: CrimsonText and Lato, these fonts are licensed under the SIL <a href="https://scripts.sil.org/OFL">Open Font License </a>(OFL). Free and Open Source Software used in production – Fidus Writer (GNU AFFERO GPL), Vivliostyle (GNU AFFERO GPL).</p>
         <p id="p-16">Cover image: European Space Agency (ESA), ASAR global monitoring <a href="https://www.esa-photolibrary.com/ESA/media/20377">Mode of the Antarctic</a>. The material is ESA copyright and is supplied to you free of charge on the following <a href="https://www.esa-photolibrary.com/ESA/info2.do">terms and conditions</a>. Find out more about <a href="https://earth.esa.int/eogateway/missions/envisat/descriptionmissions/envisat/description">Envisat here</a>.</p>
       </div>
+      
+![cover cs4rl open science](cover/cover.jpg)
