@@ -2,6 +2,5 @@
   "__comment": "Set values to false if no link should be created.",
   "repoURL": "https://github.com/cs4rl/open-science/",
   "repoBranch": "main",
-  "vivlioURL": "https://vivliostyle.vercel.app/",
-  "podURL": "https://github.com/cs4rl/open-science/"
+  "vivlioURL": "https://vivliostyle.vercel.app/"
 }
